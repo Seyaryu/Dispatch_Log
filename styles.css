@@ -1,0 +1,213 @@
+body {
+
+    background-color: rgb(210, 210, 245);
+}
+
+.main {
+    margin-top: 4em;
+    margin-left: 20em;
+    width: 100%;
+    /* background: linear-gradient(to right bottom, white ,rgb(89, 89, 219, .2));    */
+
+    background-color: #284b63;
+    border: solid 3px rgb(100, 136, 136);
+}
+
+navbar {
+    display:flex;
+    padding: 1em;
+    background-image: linear-gradient(to right, white ,#284b63);   
+    align-items: center;
+    height: 2em;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    border-bottom: solid 3px rgb(100, 136, 136);
+    
+}
+
+#currentTime {
+    margin-left: 1rem;
+    font-size: large;
+    font-weight: 400;
+}
+
+#navigation {
+
+    display:flex;
+    padding: 1em;
+
+    margin-left: auto; 
+    justify-content: right;
+
+    list-style-type: none;
+    color: white;
+    font-size: larger;
+}
+
+#navigation li {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 1em;
+
+}
+
+#navigation li:hover {
+
+    cursor: pointer;
+    color:  orangered;
+
+}
+
+#logo {
+
+    width: 5em;
+    height: auto;
+    
+}
+
+#start {
+    margin-top: 2em;
+    margin-left: 1em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+
+header {
+    
+    margin-left: min(20em, 20%);
+    margin-right: 20%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    
+}
+
+/* #datepicker {
+    height: fit-content;
+    background-color: rgba(196, 196, 196, 0.5);
+    border: solid 3px rgb(100, 136, 136);
+}
+
+.ui-icon:hover {
+    cursor: pointer;
+}
+
+.ui-icon-circle-triangle-e {
+    float: right;
+} */
+
+.ui-state-hover {
+    cursor: pointer;
+}
+
+#map {
+    display: flex;
+    justify-content: center;
+    border: solid 3px rgb(100, 136, 136);
+    box-shadow: 2px 2px;
+
+}
+
+#map iframe {
+
+    border: solid black 5px;
+
+}
+
+#datepicker {
+    font-size: 25px;
+   
+}
+
+.card {
+    display: flex;
+    float: left;
+    flex-direction: column;
+    position: fixed;
+    padding-left: 1em;
+    width: 15em;
+    border: solid black 2px;
+    border-radius: 1em;
+    padding-right: 1em;
+    background-color: #284b63;
+    color: white;
+    font-size: large;
+    box-shadow: 2px 2px black;
+    
+}
+
+.card h4 {
+    padding-bottom: 0em;
+    margin-bottom: 0em;
+}
+.card select,input {
+    margin-bottom: .5em;
+    font-size: large;
+}
+
+.card button {
+
+    margin: 1em;
+    padding: .5em;
+    font-size: large;
+    background: #3c6e71;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.card button:hover {
+    background-color: #d9d9d9;
+    color: black;
+}
+
+#notes {
+    height: 5em;    
+}
+
+#deliveryList {
+    background-color: #284b63;
+    display: flex;
+    flex-direction: right;
+    color: white
+    
+}
+
+.delivery {
+    display: flex;
+    flex-direction: right;
+    word-wrap: normal;
+    background-color: #d9d9d9;
+}
+
+#deliveryList h3  {
+
+    padding-left: 1em;
+    padding-right: 1em;
+    border-right: solid black 3px;
+
+}
+
+#content {
+    margin-top: 0em;
+    margin-left: 20em;
+}
+
+/* @media screen and (max-width: 1500px){
+
+    .card {
+        transform: scale(.5,.5);
+    }
+    #datepicker {
+        font-size: 10px;
+    }
+    #map {
+        transform: scale(.5,.5);
+    }
+    
+} */
+
+
+
+
+

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dispatch Log</title>
+
+    <link rel="stylesheet" href="styles.css">
+        
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+
+</head>
+<body>
+    
+    <navbar>
+        
+        <img id = "logo" src="./Resources/CED San Diegotranparent.png" alt="CED Logo">
+
+        <p id = 'currentTime'></p>
+
+        <ul id = "navigation">
+            <li>Previous Weeks 📅</li>
+            <li>Settings ⚙</li>
+            <li>Search 🔍</li>
+        </ul>
+
+    </navbar>
+
+    <h1 id ="start">Dispatch Log</h1>
+
+    <section class = "card">
+        <h4>Route:</h4>
+        <select name = "route" id = "route">
+            <option Value="8E">8 East</option>
+            <option Value="8W">8 West</option>
+            <option Value="15N">15 North</option>
+            <option Value="15NF">15 North Far</option>
+            <option Value="5N">5 North</option>
+            <option Value="5S">5 South</option>                                  
+        </select>
+
+        <h4>Run:</h4>
+        <select name="run" id="run">
+            <option Value="1R">1st Run</option>
+            <option Value="2R">2nd Run</option>
+        </select>
+
+        <h4>Truck:</h4>
+        <select name = "truck" id = "truck">
+            <option value="H1">Hino 1</option>
+            <option value="H2">Hino 2</option>
+            <option value="H3">Hino 3</option>
+            <option value="H4">Hino 4</option>
+            <option value="H5">Hino 5</option>
+            <option value="H6">Hino 6</option>
+            <option value="H7">Hino 7</option>
+            <option value="H8">Hino 8</option>
+            <option value="GMC">GMC</option>
+            <option value="R201">Rental 201</option>
+            <option value="PETER">Peterbuilt</option>
+        </select>
+
+        <h4>Driver:</h4>
+        <select name = "driver" id = "driver">
+            <option Value="Young">Young</option>
+            <option Value="Glenn">Glenn</option>
+            <option Value="Robert">Robert</option>
+            <option Value="Armando">Armando</option>
+            <option Value="Manny">Manny</option>
+            <option Value="Nolan">Nolan</option>                                  
+        </select>
+
+        <h4>Customer / Vendor:</h4>
+        <input type="text" placeholder="" id = "customer">
+
+        <h4>Job:</h4>
+        <input type="text" placeholder="" id = "job">
+
+        <h4>Register / RGA / PO #:</h4>
+        <input type="text" placeholder="" id = "referenceNumber">
+
+        <h4>Notes:</h4>
+        <input type="text" placeholder="" id = "notes">
+
+        <button id="submitRoute">Add Pickup/Delivery</button>
+    </section>
+
+    <header>
+    <div id="datepicker"></div>
+
+    <div id = "map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3352.416918611964!2d-117.12802058481653!3d32.83421118095491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dbfe4cc93975df%3A0x533960930fb81708!2s5457%20Ruffin%20Rd%2C%20San%20Diego%2C%20CA%2092123!5e0!3m2!1sen!2sus!4v1642185334233!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    </header>
+
+    <div class = "main">
+    
+        <section id = "deliveryList">
+            <h3>Route</h3>
+            <h3>Run</h3>
+            <h3>Truck</h3>
+            <h3>Driver</h3>
+            <h3>Customer / Vendor</h3>
+            <h3>Job</h3>
+            <h3>Register / RGA / PO #</h3>
+            <h3>Notes</h3>
+            <!---Add time picker-->
+        </section>
+    </div>  
+
+    <div id = "content">
+        
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" 
+    integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer"></script>
+
+    <script src="./assets/index.js"></script>
+    <script src="script.js"></script>  
+
+</body>
+</html>
