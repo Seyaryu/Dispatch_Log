@@ -9,6 +9,7 @@ var referenceNumber = document.getElementById("referenceNumber").value;
 var notes = document.getElementById("notes").value;
 var currentTime = document.getElementById("currentTime");
 var content = document.getElementById('content');
+const settings = document.getElementById('settings');
 
 
 
@@ -24,6 +25,8 @@ var delivery = {
     notes: ""
     }
 
+//Settings
+settings.addEventListener('click', settingsModal());
 
 //Clock
 currentTime.textContent = moment().format('MMMM Do YYYY, LT');
@@ -63,5 +66,10 @@ function addDelivery() {
 
     console.log(delivery);
   
+}
+
+//Settings Modal Window
+function settingsModal() {
+    
 }
 

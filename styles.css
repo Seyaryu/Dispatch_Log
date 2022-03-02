@@ -116,7 +116,10 @@ header {
 
 #datepicker {
     font-size: 25px;
-   
+}
+
+#datepicker .ui-datepicker {
+    box-shadow: 2px 2px;
 }
 
 .card {
@@ -159,6 +162,10 @@ header {
 .card button:hover {
     background-color: #d9d9d9;
     color: black;
+}
+
+.card button:focus {
+    background-color: rgb(139, 206, 64);
 }
 
 #notes {
