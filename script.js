@@ -1,4 +1,4 @@
-var submit = document.getElementById("submitRoute");
+const submit = document.getElementById("submitRoute");
 var route = document.getElementById("route").value;
 var run = document.getElementById("run").value;
 var truck = document.getElementById("truck").value;
@@ -10,9 +10,8 @@ var notes = document.getElementById("notes").value;
 var currentTime = document.getElementById("currentTime");
 var content = document.getElementById('content');
 const settings = document.getElementById('settings');
-
-
-
+const minOrMax = document.getElementById('minOrMax');
+const routeMaker = document.getElementById('routeMaker');
 
 var delivery = {
     route: "",
@@ -29,16 +28,32 @@ var delivery = {
 settings.addEventListener('click', settingsModal());
 
 //Clock
-currentTime.textContent = moment().format('MMMM Do YYYY, LT');
+// currentTime.textContent = moment().format('MMMM Do YYYY, LT');
+window.setInterval(function () {
+    currentTime.textContent = moment().format('MMMM Do YYYY, LT');
+}, 1000);
 
 //Calendar
 $(function () {
     $("#datepicker").datepicker();
 });
 
+minOrMax.addEventListener('click', () => {
+    if (minOrMax.textContent === '+') {
+        minOrMax.textContent = '-';
+        routeMaker.style.visibility = 'visible';
+        routeMaker.style.height = 'max-content'
+    }
+    else {
+        minOrMax.textContent = '+';
+        routeMaker.style.visibility = 'hidden';
+        routeMaker.style.height = '35px';
+    }
+    
+})
 
 //Add Route Form
-submit.addEventListener('click', addDelivery());
+submit.addEventListener('click', () => addDelivery());
 
 //Route Form
 function addDelivery() {
@@ -54,15 +69,18 @@ function addDelivery() {
         notes: notes
     }
 
+    let deliveryInput = Object.values(delivery);
+
     let newDelivery = document.createElement('div');
     newDelivery.classList.add('delivery');
     
-    for (let i=0; i<delivery.length; i++) {
+    for (let i=0; i < Object.keys(delivery).length; i++) {
         let newColumn = document.createElement('p');
-        newColumn.textContent = delivery[i].value;
+        newColumn.textContent = deliveryInput[i];
+        newDelivery.append(newColumn)
     }
 
-    newDelivery.append(content);
+    content.append(newDelivery);
 
     console.log(delivery);
   
